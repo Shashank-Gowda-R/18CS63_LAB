@@ -1,0 +1,27 @@
+table,
+tr,
+td,
+th {
+    border: 2px solid rgb(11, 247, 180);
+    width: 25%;
+    height: 30px;
+    text-align: center;
+    border-collapse: collapse;
+    background-color: rgb(182, 250, 227);
+    color: rgb(9, 126, 172);
+    font-size: 20px;
+}
+
+.table {
+    margin: 0 auto;
+}
+
+.heading {
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 4%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: red;
+}
