@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Grow Shrink using Java Script</title>
+    <script>
+        let fontSize = 5;
+let growing = true;
+
+const interval = setInterval(function() {
+  const text = document.getElementById("text");
+  if (growing) {
+    text.innerHTML = "TEXT-GROWING";
+    text.style.color = "red";
+    fontSize++;
+    text.style.fontSize = fontSize + "pt";
+    if (fontSize >= 50) {
+      growing = false;
+    }
+  } else {
+    text.innerHTML = "TEXT-SHRINKING";
+    text.style.color = "blue";
+    fontSize--;
+    text.style.fontSize = fontSize + "pt";
+    if (fontSize <= 5) {
+      clearInterval(interval);
+    }
+  }
+}, 100);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
