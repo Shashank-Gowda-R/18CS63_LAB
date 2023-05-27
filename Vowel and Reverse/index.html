@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIRST VOWEL | REVERSE ORDER</title>
+    <style type="text/css">
+        form {
+            display: none;
+        }
+    </style>
+    <script type="text/javascript">
+
+        //to display form based on button
+        function showForm(formId) {
+            // Hide all forms
+            const forms = document.querySelectorAll('form');
+            forms.forEach(form => {
+                form.style.display = 'none';
+            });
+
+            // Show the form with the given ID
+            const formToShow = document.getElementById(formId);
+            formToShow.style.display = 'block';
+        }
+
+        // Function to find the position of the left-most vowel in a string
+        function findLeftmostVowel(str) {
+            const vowels = ['a', 'e', 'i', 'o', 'u'];
+            for (let i = 0; i < str.length; i++) {
+                if (vowels.includes(str[i].toLowerCase())) {
+                    return i + 1;
+                }
+            }
+            return -1;
+        }
+
+        // Function to reverse the digits of a number
+        function reverseNumber(num) {
+            let reversed = 0;
+            while (num > 0) {
+                const digit = num % 10;
+                reversed = (reversed * 10) + digit;
+                num = Math.floor(num / 10);
+            }
+            return reversed;
+        }
+
+        // Function to handle form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            const str = document.getElementById('stringInput').value;
+            const leftmostVowel = findLeftmostVowel(str);
+            const result = document.getElementById('result');
+            const newContent = document.createElement("span");
+            if (leftmostVowel != -1)
+                newContent.innerText = "The position of left most vowel in the string " + str + " is " + leftmostVowel;
+            else
+                newContent.innerText = " There is no vowel in the string";
+            result.appendChild(newContent);
+        }
+        function handleSubmit1(event) {
+            event.preventDefault();
+            const num = parseInt(document.getElementById('numberInput').value);
+            const reversedNumber = reverseNumber(num);
+            const result = document.getElementById('result');
+            const newContent = document.createElement("span");
+            newContent.innerText = "The reverse order of the given number" + num + " is " + reversedNumber;
+            result.appendChild(newContent);
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Check First Vowel and Reverse the Number</h1>
+    <button type="button" id="button" onclick="showForm('form1');">Vowel</button>
+    <button type="button" id="button" onclick="showForm('form2');">Reverse Number</button>
+
+    <form id="form1" onsubmit="handleSubmit(event)">
+        <h2>Vowel</h2>
+        <label for="stringInput">Enter a string:</label>
+        <input type="text" id="stringInput" name="stringInput"><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <form id="form2" onsubmit="handleSubmit1(event)">
+        <h2>Reverse The Number</h2>
+        <label for="numberInput">Enter a number:</label>
+        <input type="number" id="numberInput" name="numberInput"><br>
+        <button type="submit">Submit</button>
+
+    </form>
+    <h2 id="result">Result :</h2>
+</body>
+
+</html>
