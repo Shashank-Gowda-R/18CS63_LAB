@@ -1,0 +1,28 @@
+:root {
+    --bg-color: #222327;
+    --bg-color2: #333;
+    --text-color: #fff;
+    --main-color: #29fd53;
+    --clr-neutral-900: hsl(207 19% 9%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-accent-400: #42f584;
+    --primary: #2175f5;
+    --heading: #f50606;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+p {
+    color: var(--main-color);
+}
+
+.heading {
+    font-size: 36px;
+    text-align: center;
+}
+
+.count {
+    font-size: 24px;
+}

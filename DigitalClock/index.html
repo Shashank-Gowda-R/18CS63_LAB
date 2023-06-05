@@ -11,20 +11,33 @@
 
 <body>
     <div class="container">
-        <h1>Digital Indian Standard Time</h1>
+        <h1>Digital Clock</h1>
         <div>
-            <h1 class="date" id="date">D</h1>
+            <h1 class="date" id="date"></h1>
         </div>
-        <div class="clock">
-            <span id="hours"></span>
+        <div class="clock" id="clock">
+            <!-- <span id="hours"></span>
             <span>:</span>
             <span id="minutes"></span>
             <span>:</span>
-            <span id="seconds"></span>
+            <span id="seconds"></span> -->
+            <?php
+              date_default_timezone_set('UTC+5:30');
+              currentTime = date("H:i:s A"); 
+              echo $currentTime;
+            ?>
         </div>
-        <span id="miliSeconds" class="d">HOUR :&nbsp;&nbsp;MINUTE :&nbsp;&nbsp;SECONDS </span>
     </div>
-
+    <script>
+        // Function to update the clock every second
+        function updateClock() {
+            var clock = document.getElementById("clock");
+            var currentTime = new Date().toLocaleTimeString();
+            clock.innerHTML = currentTime;
+        }
+        // Update the clock immediately and then every second
+        setInterval(updateClock, 1000);
+    </script>
     <script src="./script.js"></script>
 </body>
 

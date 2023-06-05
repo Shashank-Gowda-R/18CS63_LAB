@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text?css" href="D:\LAB MANUAL\students Data\style.css"?>
+<students>
+  <student>
+    <usn>01VT001</usn>
+    <name>John Doe</name>
+    <college>ABC Engineering College</college>
+    <branch>Computer Science</branch>
+    <year>2019</year>
+    <email>john.doe@example.com</email>
+  </student>
+  
+  <student>
+    <usn>01VT002</usn>
+    <name>Jane Smith</name>
+    <college>ABC Engineering College</college>
+    <branch>Mechanical Engineering</branch>
+    <year>2020</year>
+    <email>jane.smith@example.com</email>
+  </student>
+  
+  <student>
+    <usn>01VT003</usn>
+    <name>Michael Johnson</name>
+    <college>ABC Engineering College</college>
+    <branch>Electrical Engineering</branch>
+    <year>2021</year>
+    <email>michael.johnson@example.com</email>
+  </student>
+</students>

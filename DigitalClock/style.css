@@ -5,6 +5,18 @@
 	font-family: Arial, sans-serif;
 }
 
+:root {
+	--bg-color: #222327;
+	--bg-color2:#333;
+	--text-color: #fff;
+	--main-color: #29fd53;
+	--clr-neutral-900: hsl(207 19% 9%);
+	--clr-neutral-100: hsl(0, 0%, 100%);
+	--clr-accent-400: #42f584;
+	--primary: #2175f5;
+	--heading:#f50606;
+}
+
 .container {
 	display: flex;
 	flex-direction: column;
@@ -16,11 +28,11 @@
 h1 {
 	font-size: 3rem;
 	margin-bottom: 1rem;
-	color: #29fd53;
+	color:var(--heading)
 }
 
-.date{
-	color: black !important;
+.date {
+	color: var(--bg-color) !important;
 }
 
 .clock {
@@ -28,8 +40,8 @@ h1 {
 	align-items: center;
 	justify-content: center;
 	font-size: 5rem;
-	color: #fff;
-	background-color: #333;
+	color: var(--text-color);
+	background-color: var(--bg-color2);
 	padding: 1rem 2rem;
 	border-radius: 1rem;
 	box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
@@ -44,8 +56,8 @@ h1 {
 	align-items: center;
 	justify-content: center;
 	font-size: 2rem;
-	color: #fff;
-	background-color: #333;
+	color: var(--text-color);
+	background-color: var(--bg-color2);
 	padding: 1rem 2rem;
 	border-radius: 1rem;
 	box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
