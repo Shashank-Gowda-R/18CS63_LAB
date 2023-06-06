@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Students data</h2>
+    <button type="button" onclick="loadXMLData()">Display data</button>
+    <br>
+    <br>
+    <table id="demo">
+
+    </table>
+    <script>
+        function loadXMLData(){
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function(){
+                const xmlData = xhttp.responseXML;
+                const cd = xmlData.getElementsByTagName("student");
+                myfunction(cd);
+            }
+            xhttp.open("GET","data.xml");
+            xhttp.send();
+        }
+        function myfunction(cd){
+            let table = "<tr><th>USN</th><th>NAME</th><th>COLLEGE</th><th>branch</th><th>year</th><th>Email</th>";
+                for (let i=0; i< cd.length; i++){
+                    table+="<tr><td>"+
+                        cd[i].getElementsByTagName("usn")
+                        [0].childNodes[0].nodeValue +
+                        "</td><td>"+
+                            cd[i].getElementsByTagName("name")
+                            [0].childNodes[0].nodeValue +
+                            "</td><td>"+
+                                cd[i].getElementsByTagName("college")
+                            [0].childNodes[0].nodeValue +
+                            "</td><td>"+
+                                cd[i].getElementsByTagName("branch")
+                            [0].childNodes[0].nodeValue +
+                            "</td><td>"+
+                                cd[i].getElementsByTagName("year")
+                            [0].childNodes[0].nodeValue +
+                            "</td><td>"+
+                                cd[i].getElementsByTagName("email")
+                            [0].childNodes[0].nodeValue +
+                            "</td></tr>";
+
+                }
+                document.getElementById("demo").innerHTML=table;
+        }
+    </script>
+</body>
+</html>
