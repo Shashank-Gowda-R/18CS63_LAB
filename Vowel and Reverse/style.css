@@ -1,0 +1,72 @@
+h1,
+h2 {
+    text-align: center;
+}
+
+form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+    /* Adjust the height if needed */
+}
+
+.user-box input {
+    border: none;
+    border-color: aqua;
+    border-bottom: 1px solid black !important;
+    /* Adjust color and thickness as desired */
+    outline: none;
+    width: 60%;
+    margin-bottom: 30px;
+}
+
+.login-box{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.submit{
+    border: 1px solid red;
+    width: auto;
+    font-size: large;
+    text-transform: uppercase;
+    color: rgb(10, 10, 10);
+    background-color: aquamarine;
+    font-weight: bolder;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 20px;
+}
+
+.input::placeholder {
+    color: rgb(234, 173, 173); /* Adjust the color as desired */
+    font-style:normal; /* Adjust the font style as desired */
+    font-weight: 900;
+    font-size:medium;
+    background-color:rgb(148, 235, 235);
+  }
+
+  body{
+    background-color: rgb(148, 235, 235);
+  }
+
+  .button1{
+    border: 1px solid red;
+    width: auto;
+    font-size: large;
+    text-transform: uppercase;
+    color: rgb(10, 10, 10);
+    background-color: aquamarine;
+    font-weight: bolder;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 20px;
+  }

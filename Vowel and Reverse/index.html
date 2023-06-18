@@ -1,3 +1,9 @@
+<!-- 4. Develop and demonstrate a HTML5 file that includes JavaScript script that uses functions for the 
+following problems:
+a. Parameter: A string
+b. Output: The position in the string of the left-most vowel
+c. Parameter: A number
+d. Output: The number with its digits in the reverse order -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +16,18 @@
     <style type="text/css">
         form {
             display: none;
+        }
+
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            appearance: none;
+            margin: 0;
+        }
+
+        .gap {
+            margin-top: 20px;
         }
     </style>
     <script type="text/javascript">
@@ -68,7 +86,7 @@
             const reversedNumber = reverseNumber(num);
             const result = document.getElementById('result');
             const newContent = document.createElement("span");
-            newContent.innerText = "The reverse order of the given number" + num + " is " + reversedNumber;
+            newContent.innerText = "The reverse order of the given number " + num + " is " + reversedNumber;
             result.appendChild(newContent);
         }
 
@@ -77,14 +95,17 @@
 
 <body>
     <h1>Check First Vowel and Reverse the Number</h1>
-    <button type="button" id="button" class="button1" onclick="showForm('form1');">Vowel</button>
-    <button type="button" id="button" class="button1" onclick="showForm('form2');">Reverse Number</button>
+    <div class="button-container">
+        <button type="button" id="button" class="button1" onclick="showForm('form1');">Vowel</button>
+        <button type="button" id="button" class="button1" onclick="showForm('form2');">Reverse Number</button>
+    </div>
+
     <div class="login-box">
         <form id="form1" onsubmit="handleSubmit(event)" autocomplete="off">
             <h2>Check for Vowel</h2>
             <br>
             <div class="user-box">
-                <input type="text" id="stringInput" name="stringInput" placeholder="Enter a string">
+                <input type="text" id="stringInput" name="stringInput" class="input" placeholder="Enter a string">
             </div>
             <button type="submit" class="submit">Submit</button>
         </form>
@@ -94,7 +115,8 @@
             <h2>Reverse The Number</h2>
             <br>
             <div class="user-box">
-                <input type="number" id="numberInput" name="numberInput" required>
+                <input type="number" id="numberInput" class="input" placeholder="Enter a number" name="numberInput"
+                    required>
             </div>
             <button type="submit" class="submit">
                 <span></span>
