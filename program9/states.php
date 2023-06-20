@@ -9,9 +9,9 @@
     $statesArray = explode(" ", $states);
     $resultantArray = array();
 
-    echo "<h2>Original Array:</h2>";
+    echo "<h2>Original Array:</h2> \n";
     foreach ($statesArray as $key => $state) {
-        echo "STATES[" . $key . "]=" . $state . "<br>";
+        echo "STATES[" . $key . "]=" . $state . "\n";
     }
 
     // Search for a word that ends in "xas" and store it in element 0 of resultant array
