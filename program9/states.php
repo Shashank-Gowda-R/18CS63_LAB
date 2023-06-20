@@ -30,9 +30,9 @@
     preg_match('/\b\w*a\b/i', $states, $matches);
     $resultantArray[3] = $matches[0];
 
-    echo "<h2>Resultant Array:</h2>";
+    echo "<h2>Resultant Array:</h2> \n";
     foreach ($resultantArray as $key => $state) {
-        echo "STATES[" . $key . "]=" . $state . "<br>";
+        echo "STATES[" . $key . "]=" . $state . "\n";
     }
     ?>
 </body>
