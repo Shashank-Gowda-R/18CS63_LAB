@@ -9,6 +9,7 @@
     $statesArray = explode(" ", $states);
     $resultantArray = array();
 
+    echo"\n\n";
     echo "<h2>Original Array:</h2> \n";
     foreach ($statesArray as $key => $state) {
         echo "STATES[" . $key . "]=" . $state . "\n";
@@ -30,6 +31,7 @@
     preg_match('/\b\w*a\b/i', $states, $matches);
     $resultantArray[3] = $matches[0];
 
+    echo"\n\n";
     echo "<h2>Resultant Array:</h2> \n";
     foreach ($resultantArray as $key => $state) {
         echo "STATES[" . $key . "]=" . $state . "\n";
